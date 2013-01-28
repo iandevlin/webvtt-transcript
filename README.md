@@ -31,3 +31,8 @@ document.getElementById("en").addEventListener("click", function(e) {
     webvttTranscript('subtitles-en.vtt', display);
 }, false);
 ```
+
+Example
+=======
+
+You can view an online example at [WebVTT Transcript Example](http://iandevlin.com/webvtt-transcript/)
