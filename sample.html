@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>WebVTT Transcript Example</title>
-	<style>
-		body {
-			font-family:Georgia, serif;
-			color:#333;
-		}
-		ul {
-			list-style-type:none;
-			padding:0;
-			margin-bottom:2%;
-		}
-		ul li {
-			display:inline;
-			margin-right:1%;
-		}
-		#transcript {
-			width:50%;
-			min-height:5em;
-			padding:1em .5em;
-			border:1px solid #333;
-		}		
-		footer { margin-top:1%; }
-	</style>
+  <meta charset="utf-8">
+  <title>WebVTT Transcript Example</title>
+  <style>
+    body {
+      font-family:Georgia, serif;
+      color:#333;
+    }
+    ul {
+      list-style-type:none;
+      padding:0;
+      margin-bottom:2%;
+    }
+    ul li {
+      display:inline;
+      margin-right:1%;
+    }
+    #transcript {
+      width:50%;
+      min-height:5em;
+      padding:1em .5em;
+      border:1px solid #333;
+    }   
+    footer { margin-top:1%; }
+  </style>
 </head>
 <body>
-	<h1><abbr title="Web Video Text Track">WebVTT</abbr> Transcript</h1>
-	<ul>
-		<li><a id="en" href="#">English</a></li>
-		<li><a id="de" href="#">Deutsch</a></li>
-		<li><a id="clear" href="#">Clear</a></li>
-	</ul>
-	<div id="transcript">The <abbr title="Web Video Text Track">WebVTT</abbr> transcript will appear here.</div>
-	<footer>
-		<small>Text examples are altered transcripts from <br/><a href="http://www.elephantsdream.org">www.elephantsdream.org</a> by the Blender Foundation/Netherlands Media Art Institute</small>
-	</footer>
-	<script src="js/transcript.js"></script>
-	<script>
-		var display = document.getElementById('transcript');
-		document.getElementById("en").addEventListener("click", function(e) {
-			e.stopPropagation();
-			webvttTranscript('subtitles-en.vtt', display);
-		}, false);
-		document.getElementById("de").addEventListener("click", function(e) {
-			e.stopPropagation();
-			webvttTranscript('subtitles-de.vtt', display);
-		}, false);
-		document.getElementById("clear").addEventListener("click", function(e) {
-			e.stopPropagation();
-			display.innerHTML = "The <abbr title='Web Video Text Track'>WebVTT</abbr> transcript will appear here.";
-		}, false);
-	</script>
+  <h1><abbr title="Web Video Text Track">WebVTT</abbr> Transcript</h1>
+  <ul>
+    <li><a id="en" href="#">English</a></li>
+    <li><a id="de" href="#">Deutsch</a></li>
+    <li><a id="clear" href="#">Clear</a></li>
+  </ul>
+  <div id="transcript">The <abbr title="Web Video Text Track">WebVTT</abbr> transcript will appear here.</div>
+  <footer>
+    <small>Text examples are altered transcripts from <br/><a href="http://www.elephantsdream.org">www.elephantsdream.org</a> by the Blender Foundation/Netherlands Media Art Institute</small>
+  </footer>
+  <script src="js/transcript.js"></script>
+  <script>
+    var display = document.getElementById('transcript');
+    document.getElementById("en").addEventListener("click", function(e) {
+      e.stopPropagation();
+      webvttTranscript('subtitles-en.vtt', display);
+    }, false);
+    document.getElementById("de").addEventListener("click", function(e) {
+      e.stopPropagation();
+      webvttTranscript('subtitles-de.vtt', display);
+    }, false);
+    document.getElementById("clear").addEventListener("click", function(e) {
+      e.stopPropagation();
+      display.innerHTML = "The <abbr title='Web Video Text Track'>WebVTT</abbr> transcript will appear here.";
+    }, false);
+  </script>
 </body>
 </html>
